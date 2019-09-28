@@ -2,7 +2,7 @@
 //http 这个模块的职责就是帮你创建编写服务器的
 
 //1.加载http核心模块
-var http = require('http')
+var http = require('01/code/11-http')
 
 //2.使用http.createServer()方法创建一个web服务器
 //返回一个Server实例

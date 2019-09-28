@@ -1,4 +1,4 @@
-var http = require('http')
+var http = require('01/code/11-http')
 //1.创建server
 var server = http.createServer();
 
