@@ -14,10 +14,11 @@
 - 关于JSP
   + jsp有tomcat解析成servlet,如果是静态文件,想html,js,css等,转化成字符串通过write方法原样输出给客户端
   + 其他的如<%..%>,就将其中的内容按原样插入servlet源代码中
-  +  <=%...%>形式：JSP引擎遇到这种形式，并不是把其中的内容直接放到Serclet源程序中，而是通过print方法将”=”后面的内容输出到客户端
+  + <=%...%>形式：JSP引擎遇到这种形式，并不是把其中的内容直接放到Serclet源程序中，而是通过print方法将”=”后面的内容输出到客户端
   + JSP指令：%@page...%就是一个JSP的page指令。对于这中形式，JSP引擎按照指令类型和它的属性翻译成相应的Java代码。
   + <%=request.getParameter("username")%>  等价于  ${ param.username }
   + jsp总结
     - jsp:是后端渲染model,如作用域${user}等,前端通过js渲染,如<script>中ajax请求数据
-    - 比如springmvc渲染视图,指的是将model数据放在view(jsp)中,仅仅是填充${作用域}的数据,而js静态数据是服务器返回给浏览器后,浏览器再次向服务器发起请求而得到动态数据的
+    - 比如springmvc渲染视图,指的是将model数据放在view(jsp)中,仅仅是填充${作用域}的数据
+    - 而js静态数据是服务器返回给浏览器后,浏览器再次向服务器发起请求而得到动态数据的
     - 终于也理解了作用域是属于服务器,script属于客户端操作这一说法
